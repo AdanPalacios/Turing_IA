@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>TURING IA</title>
+
+
+
+    
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo-onix-digital.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/animated.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.css' %}">
+
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!--***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+        
+            <a href="index.html" class="logo">
+              <h1 style="padding-top: 18px; color: #03a4ed; font-style: normal;">TURING-IA</h1>
+            </a>
+            
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li class="scroll-to-section"><a href="{% url 'inicio' %}" class="active">Inicio</a></li>
+              <li class="scroll-to-section"><a href="{% url 'servicios' %}">Servicios</a></li>
+              <li class="scroll-to-section"><a href="{% url 'nosotros' %}">Nosotros</a></li>
+              <li class="scroll-to-section"><a href="#portfolio">Tableau</a></li>
+              <li class="scroll-to-section"><a href="#contact">Contacto</a></li> 
+              <li class="scroll-to-section"><div class="main-red-button-hover"><a href="#contact">Visitanos</a></div></li> 
+            </ul>        
+            <a class='menu-trigger'>
+                <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ***** Header Area End ***** -->
+
+
+
+
+ <!-- ***** Content Area ***** -->
+
+{% block content %}   
+
+
+{% endblock %}
+
+
+
+ <!-- ***** End Content Area ***** -->
+
+  
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="about footer-item">
+            <div class="logo">
+              <a href="#">
+                <h1 style="padding-top: 18px; color: #03a4ed; font-style: normal;">TURING-IA</h1>
+              </a>
+            </div>
+            <a href="#">contacto@turing-ia.com</a>
+            <ul>
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="services footer-item">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#"> Business Analyst</a></li>
+              <li><a href="#">Workshop</a></li>
+              <li><a href="#">Capacitación</a></li>
+              <li><a href="#">Venta de Software</a></li>
+            </ul>
+          </div>
+        </div>
+      
+        <div class="col-lg-3">
+          <div class="subscribe-newsletters footer-item">
+            <br>
+            <br>
+            <br>
+
+            <ul>
+              <li><a href="#">Hardware</a></li>
+              <li><a href="#">Desarrollo de Sofware</a></li>
+              <li><a href="#">Balanced Scorecard</a></li>
+            </ul>
+            
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="copyright">
+            <p>Copyright © 2022 Turing IA All Rights Reserved. 
+            <br>
+           
+          </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+
+  <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}">
+
+
+  <!-- Scripts -->
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/js/owl-carousel.js' %}"></script>
+  <script src="{% static 'assets/js/animation.js' %}"></script>
+  <script src="{% static 'assets/js/imagesloaded.js' %}"></script>
+  <script src="{% static 'assets/js/custom.js' %}"></script>
+
+  <script>
+  // Acc
+    $(document).on("click", ".naccs .menu div", function() {
+      var numberIndex = $(this).index();
+
+      if (!$(this).is("active")) {
+          $(".naccs .menu div").removeClass("active");
+          $(".naccs ul li").removeClass("active");
+
+          $(this).addClass("active");
+          $(".naccs ul").find("li:eq(" + numberIndex + ")").addClass("active");
+
+          var listItemHeight = $(".naccs ul")
+            .find("li:eq(" + numberIndex + ")")
+            .innerHeight();
+          $(".naccs ul").height(listItemHeight + "px");
+        }
+    });
+  </script>
+</body>
+</html>
