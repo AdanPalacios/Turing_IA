@@ -62,11 +62,15 @@
               <li class="scroll-to-section"><a href="{% url 'nosotros' %}">Nosotros</a></li>
               <li class="scroll-to-section"><a href="#portfolio">Tableau</a></li>
               <li class="scroll-to-section"><a href="#contact">Contacto</a></li> 
-              <li class="scroll-to-section"><div class="main-red-button-hover"><a href="#contact">Visitanos</a></div></li> 
+            
+              {% if user.is_authenticated %}
+                  <li class="scroll-to-section"><a href="{% url 'perfilEditar' user.username %}">Mi perfil</a></li> 
+                  <li class="scroll-to-section"><div class="main-red-button-hover"><a href="{% url 'logout' %}">Cerrar sesion</a></div></li> 
+              {% else %}
+                  <li class="scroll-to-section"><div class="main-red-button-hover"><a href="{% url 'login' %}">Iniciar sesion</a></div></li> 
+              {% endif %}
             </ul>        
-            <a class='menu-trigger'>
-                <span>Menu</span>
-            </a>
+            
             <!-- ***** Menu End ***** -->
           </nav>
         </div>
